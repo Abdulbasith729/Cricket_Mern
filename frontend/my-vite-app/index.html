@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Keep</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+<header>
+  <h1>Cricket</h1>
+  <button id="deleteAllNotes">Delete all notes</button>
+</header>
+<section class="noteslist"></section>
+<hr>
+<section>
+  <h2>Cricket Dashboard</h2>
+  <form class="createNotes">
+    <div class="form-group">
+      <label for="createNoteTitle1">Name:</label>
+      <input type="text" id="createNoteTitle1" name="name" placeholder="Enter Name" required>
+    </div>
+    <div class="form-group">
+      <label for="createNoteTitle2">Email:</label>
+      <input type="email" id="createNoteTitle2" name="email" placeholder="Enter Email" required>
+    </div>
+    <div class="form-group">
+      <label for="createNoteTitle3">Phone Number:</label>
+      <input type="tel" id="createNoteTitle3" name="phone" placeholder="Enter Phone Number" required>
+    </div>
+    <div class="form-group">
+      <label for="cricket-role">Select a cricket role:</label>
+      <select id="cricket-role" name="cricket-role">
+        <option value="batsman">Batsman</option>
+        <option value="bowlers">Bowlers</option>
+        <option value="all-rounder">All Rounder</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Is the player available:</label>
+      <div class="radio-group">
+        <div>
+          <input type="radio" id="available_yes" name="availability" value="Yes" required>
+          <label for="available_yes">Yes</label>
+        </div>
+        <div>
+          <input type="radio" id="available_no" name="availability" value="No" required class="No">
+          <label for="available_no" class="No">No</label>
+        </div>
+      </div>
+    </div>
+    <button id="CreateNoteButton" type="submit">Submit</button>
+  </form>
+</section>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+font-family: 'poppins';
+
+}
+body{
+  background: #E0F2F1;
+}
+header{
+  background: white;
+  display: flex;
+  justify-content:space-between;
+  padding: 1rem;
+  
+}
+h1{
+  color: #00695C;
+
+}
+#deleteAllNotes{
+color: #f14a37;
+border: none;
+padding: 0.7rem 2rem;
+border-radius: 12px;
+font-weight: bold;
+border: 1px solid rgb(60, 150, 54);
+cursor: pointer;
+}
+.noteslist{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+.note{
+background: white;
+border: 1px solid rgb(181, 137, 137);
+border-radius: 12px;
+padding: 1rem;
+margin: 1rem;
+}
+.note button{
+  background: #00695C;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.8rem 2rem;
+  border: none;
+  margin: 0.8rem;
+}
+
+.createNotes{
+  background: white;
+  border: 1px solid #00695C;
+  padding: 1rem;
+  width: 40vw;
+margin: 1rem;
+}
+
+input, textarea{
+  display: block;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #00695C;
+  margin:0.8rem 0;
+}
+#CreateNoteButton{
+  color: #311ed8;
+border: none;
+padding: 0.7rem 2rem;
+border-radius: 12px;
+font-weight: bold;
+border: 1px solid rgb(60, 150, 54);
+cursor: pointer;
+margin: 0.8rem 0;
+}
+h2{
+  margin: 1.5rem;
+}
+.radio-group{
+  display: flex;
+  /* margin-: 5rem; */
+}
+
+.No{
+  margin-right: 4rem;
+}
+
+
+</style>
+
+
